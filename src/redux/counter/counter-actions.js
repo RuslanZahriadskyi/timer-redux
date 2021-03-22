@@ -1,17 +1,6 @@
-import { INCREMENT, DECREMENT } from './counter-types';
+import { createAction } from '@reduxjs/toolkit';
 
-const increment = value => {
-  return {
-    type: INCREMENT,
-    payload: value,
-  };
-};
-
-const decrement = value => {
-  return {
-    type: DECREMENT,
-    payload: value,
-  };
-};
+const increment = createAction('counter/increment');
+const decrement = createAction('counter/decrement');
 
 export default { increment, decrement };
